@@ -1,0 +1,6 @@
+ $match -> Filters(case sensitive) the documents to pass only the documents that match the specified condition(s) to 
+ the next pipeline stage.
+$limit -> Limits the number of documents passed to the next stage.It takes a positive integer that specifies 
+the maximum number of documents to pass along.
+$filter ->  Selects a subset of an array to return based on the specified condition.
+$project stage can  excludes the field as well as can  include fields in its output documents(1 or true  and 0 or false)

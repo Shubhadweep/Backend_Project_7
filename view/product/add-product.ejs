@@ -1,0 +1,26 @@
+<%-include('../Includes/header.ejs')%>
+</head>
+<body>
+<header><%-include('../Includes/navbar.ejs')%></header>
+<main>
+  <section class="py-5">
+    <div class="container">
+      <form action="/add-product" method="post">
+        <h1><% message%></h1>
+        <label>Product Name</label><br />
+        <input type="text" name="productName" id="productName" /><br />
+        <label>Product Price</label><br />
+        <input type="text" name="productPrice" id="productPrice" /><br />
+        <label>Category</label><br />
+        <select name="category" id="category">
+          <option selected disabled>Choose Category</option>
+          <% allCategory.map(data => {%>
+          <option value="<%= data._id%>"><%= data.category%></option>
+          <% })%>
+        </select>
+        <input type="submit" />
+      </form>
+    </div>
+  </section>
+</main>
+<%-include('../Includes/footer.ejs')%>
